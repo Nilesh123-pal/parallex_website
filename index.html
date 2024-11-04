@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallex</title>
+   <link rel="stylesheet" href="style.css">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="shortcut icon" href="https://i.pinimg.com/564x/a3/36/a6/a336a6e0082d4344bb58fa43d017a6f7.jpg" type="image/x-icon">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Spicy+Rice&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Rowdies:wght@300;400;700&family=Rubik+Bubbles&family=Spicy+Rice&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+body::-webkit-scrollbar
+        {
+            background: transparent
+        }
+
+        body::-webkit-scrollbar-thumb
+        {
+            background: url(https://i.pinimg.com/564x/45/3f/b5/453fb53e889af01995239d3d747c9859.jpg); background-position: center; background-size: cover; border-radius: 20px
+        }
+
+
+        body::-webkit-scrollbar-track
+        {
+            background:rgb(0, 217, 255);
+        }
+
+
+#click
+{
+    display: none;
+}
+
+
+
+.button
+{
+    height:45px; width:120px; border-radius: 20px;background: url(https://i.pinimg.com/originals/09/8c/c4/098cc4ec42d8c63442cc1241cfe8586b.gif); background-size:cover; background-position:center bottom; position: absolute;  border:4px solid rgba(128, 128, 128, 0.151); display: flex; align-items: center; box-shadow: 1px 1px 3px 3px inset #0000009c; z-index: 30; top:0; left:0; position: absolute; margin-left: 20px;
+}
+
+.button::before
+{
+    content:""; position: absolute;  width:36px; height:36px; background: url(https://i.pinimg.com/enabled/564x/22/00/21/220021452170086ca8d502ad563cbbcd.jpg); border-radius: 50%; box-shadow:0 0 3px 3px inset #ffee00cb,0px 0px 3px 3px #000, 6px 0px 10px 2px rgba(255, 255, 0, 0.507), 8px 0px 10px 2px #fff; transition: 0.6s linear; background-size: 100px; background-position: center;
+}
+
+#click:checked ~ label .button::before
+{
+    transform: translateX(74px) rotate(360deg);  background:url(https://i.pinimg.com/enabled/564x/b8/df/9c/b8df9ca5362c0632ee5c9411d3c1ab37.jpg);box-shadow:2px 1px 3px 2px inset #000, -3px 0px 10px 2px rgba(73, 69, 69, 0.322),-3px 0px 10px 6px #fff; background-size: 38px; background-position: center; transition: 0.6s linear;
+}
+
+
+#click:checked ~ label .button
+{
+    height:45px; width:120px; border-radius: 20px;background: url(https://i.pinimg.com/originals/da/c8/9b/dac89b3a99c802aee636a7e78bfcae18.gif); background-size:cover; background-position:410px; position: absolute;  border:4px solid rgba(128, 128, 128, 0.397); display: flex; align-items: center;
+}
+
+    </style>
+
+  
+<input type="checkbox" id="click" class=".input">
+<label for="click">
+    <div class="button"></div>
+</label>
+
+<body>
+    
+
+ <!-- section1 -->
+
+ <div class="body-wrap">
+     <section>
+        <header>
+            <div class="logo"><p class="plogo">Paralle✘</p></div>
+            <nav>
+                <ul id="ul">
+                    <li><a href="#" class="active"><i class='bx bxs-home'></i>HOME</a></li>
+                    <li><a href="#"><i class='bx bxl-netlify' ></i>Services</a></li>
+                    <li><a href="#"><i class='bx bxs-phone' ></i>Contact Us</a></li>
+                    <li><a href ="#"><i class="fa-solid fa-users"></i>About Us</a></li>
+                    <li><a href="#"><i class='bx bxs-message-rounded-dots' ></i>Messages</a></li>
+                </ul>
+            </nav>
+        </header>
+     </section>
+
+      <!-- section1 -->
+
+
+<!-- section2 -->
+  <section class="section2">
+  <div class="sun"></div>
+ 
+  <div class="moon"></div>
+ <img src="layers/stars.png" class="stars"> 
+
+  <img src="layers/stars.png" style="transform: translate(180deg);" class="stars">
+    <img src="layers/mid-mount.png" id="mid-mount" style="left:10%; ">
+   
+    <img src="layers/Layer 3.png" id="layer3" style="top:20%; left:-5%; filter: drop-shadow(-10px 20px 10px #000000a4);">
+   
+    <img src="layers/cloud1.png" id="cloud1" style="filter: drop-shadow(-10px 20px 10px #000000a4);">
+    <img src="layers/birds.gif" style="height:100px;width:10%; top:25%;" id="birds" style="filter: drop-shadow(-10px 20px 10px #000000a4);">
+    <img src="layers/cloud2.png" id="cloud2" style="filter: drop-shadow(-10px 20px 10px #000000a4);">
+     <img src="layers/cloud3.png" id="cloud3" style="filter: drop-shadow(-10px 20px 10px #000000a4);">
+<img src="layers/cloud4.png" id="cloud4" style="filter: drop-shadow(10px 20px 10px #000000a4);">
+    <h1 id="h1">Parallex</h1>
+  <img src="layers/Layer4.png"  id="layer4" style="height:70%; top:40%;filter: drop-shadow(-10px 20px 10px #000000a4);">
+
+  <img src="layers/Layer 1 right-mount.png"  id="right-mount" style="width:70%;left:50%; top:0; height: 100%;filter: drop-shadow(-10px 20px 10px #000000a4);">
+
+  <img src="layers/Layer 1left-mount.png"  id="left-mount" style="width:50%; height:100%; top:340px;filter: drop-shadow(-10px 20px 10px #000000a4);">
+<img src="layers/hiker2.png" id="hiker2" style="height: 100%; width:40%; top:0;  left: 0;transform-origin: bottom; filter: drop-shadow(-10px 20px 10px #000000a4);">
+ </section>
+
+<!-- 
+ section3 -->
+ <section class="section3">
+    <div class="glass">
+<p class="p" style="opacity:1;">Nature's Treasure</p>
+<h1 class="h1" >
+  I believe a leaf of grass is no less than the journey-work of the stars.”
+</h1>
+
+
+<div class="author-details">
+<div class="author-wrap">
+  <p class="author" style="opacity: 1;">Author</p>
+  <p class="nilesh">Nilesh</p>
+</div>
+
+<div class="i-am">
+  <div class="am">
+   <h2>I Am a <span></span></h2>
+
+  </div>
+</div>
+</div>
+
+<div class="readmore">
+  <div class="btn3">
+ <div class="btglass"><span>Readmore..</span></div>
+</div>
+  </div>
+
+</div>
+
+
+
+
+ </section>
+
+
+ <!-- 
+ section3 -->
+
+ <!-- section4 -->
+<section class="section4">
+ 
+ <div class="img-wrap">
+
+  
+ 
+  <img src="layers/background2.png" style="position: absolute; bottom:0px; width:100%; height:100%; border-radius: inherit; filter: drop-shadow(3px 3px 3px rgb(35, 60, 0));" class="Layer1MAIN" >
+  <img src="layers/Layertr.png" style="position: absolute; bottom:0px; left:50%;  height:100%; width:50%; filter: drop-shadow(3px 40px 10px rgba(0, 0, 0, 0.646));" class="Layer1MAIN"">
+  <img src="layers/Layer tl.png" style="position: absolute; bottom:0px;  height:100%; border-radius: inherit; filter: drop-shadow(3px 30px 10px #000000aa); transform: translateZ(100px);" class="Layer1MAIN" >
+ 
+  <img src="layers/camp.png" style="position: absolute; bottom:100px; width:50%; height:40%; left:50%;filter: drop-shadow(0px 20px 20px rgb(0, 119, 255));" class="camp" >
+  
+  <img src="layers/fire.gif" style="position: absolute; bottom:0; width:40%; left:25%; height:40%; border-radius: inherit; filter: drop-shadow(10px 10px 30px rgb(212, 170, 0));">
+  <img src="https://img1.picmix.com/output/stamp/thumb/0/1/5/0/800510_32ab2.gif"  style="position: absolute; bottom:70%; left:75%; width:20%; height:20%; border-bottom-left-radius:inherit ;">
+  <img src="layers/mensgif3.gif" class="mens"  style="position: absolute; bottom:0; left:20%; width:50%; height:70%; filter: drop-shadow(2px 2px 3px #000);">
+  <img src="layers/LAYER2 GRASSMAIN.png"  style="position: absolute; bottom:0;  width:100%; height:100%; border-bottom-left-radius:inherit ; filter: drop-shadow(2px 2px 2px #000);">
+  <img src="https://img1.picmix.com/output/stamp/thumb/0/1/5/0/800510_32ab2.gif"  style="position: absolute; bottom:0;  width:20%; height:20%; border-bottom-left-radius:inherit ;">
+ 
+  
+</div> 
+<div class="content-wrap">
+  <h1 class="content">Best Places all over the world!</h1>
+<p class="content">“The world has enough beautiful mountains and meadows, spectacular skies and serene lakes. It has enough lush forests, flowered fields and sandy beaches. It has plenty of stars and the promise of a new sunrise and sunset every day. What the world needs more of is people to appreciate and enjoy it.”
+  <br>
+  <br>
+  Mother Nature, also called Mother Earth, is the personification of the natural world. Everything about her—the water, the air, the flora, and fauna—creates more life, which is where the idea of “mothering” began. Religions and philosophies from everywhere have looked at nature as a maternal “giver,” but also a mother to be revered.
+
+Mother Nature can be as formidable as she can be nurturing, and these handpicked quotes capture her complex essence.
+<br>
+<br>
+I think nature's imagination is so much greater than man's, she's never going to let us relax.”
+<br>
+<br>
+Every morning was a cheerful invitation to make my life of equal simplicity, and I may say innocence, with Nature herself."
+<br>
+<br>
+  "I would maintain that thanks are the highest form of thought; and that gratitude is happiness doubled by wonder." — G.K. Chesterton
+</p>
+<a href="#" target="_blank" class="a">READMORE...</a>
+</div>
+
+<div class="btn-wrap">
+  <div class="btns">
+      <div class="btn1 bt">
+          <div class="child-btn"><p>Subscribe</p></div>
+      </div>
+      <div class="btn2 bt">
+          <div class="child-btn2"><p>FOLLOW!</p></div>
+      </div>
+</div>
+   
+<div class="social">
+
+  <a href="http://">
+  <div class="circle circle-2">
+   <div class="child2">
+
+   </div>
+  </div>
+</a>
+
+<a href="http://">
+   <div class="circle circle-1">
+    <div class="child">
+
+    </div>
+   </div>
+</a> 
+
+
+
+<a href="http://">
+   <div class="circle circle-3">
+    <div class="child3">
+
+    </div>
+   </div>
+</a>
+  
+<a href="http://">
+   <div class="circle circle-4">
+    <div class="child4">
+
+    </div>
+   </div>
+</a> 
+
+
+
+</div>
+
+
+
+
+  
+  </div> 
+</section>
+
+
+  <!-- section4 -->
+<!-- section6 -->
+<section class="section6">
+ 
+<img src="section6/section6backbg.png" class="section6backbg">
+<div class="aboutus" style="position: absolute; height:100%; width:25%; display: flex; align-items: center; flex-direction: column;bottom:0; left:15%;">
+  <h1 style=" font-size: 3em; background:rgb(0, 179, 255);-webkit-text-stroke: 1px #ffffff7a; color: transparent;background-clip: text;filter: drop-shadow(0px 0px 20px greenyellow);font-family:Spicy Rice, serif"; >About Us</h1>
+  <p style="color:#fff; font-size: 15px;font-family: Acme, sans-serif; filter: drop-shadow(0px 0px 20px greenyellow);">
+The sun rises high in the morning sky.
+    Golden hues upon the hills reside.
+    The gentle breeze whispers through the trees.
+  A soothing melody carried by the breeze.
+     The forest awakens from its sleep.
+    Birds sing sweetly, their voices deep.
+    The river flows, a winding stream.
+    Reflecting sunbeams, a shimmering dream.
+    The mountains stand, majestic and tall.
+    Their peaks hidden in the clouds' soft call.</p>
+</div>
+<img src="section6/leafs.png" class="leafs" style="filter: drop-shadow(10px 10px 10px #000);"> 
+
+<img src="section6/section6frontbg.png"  class="section6frontbg" style="filter: drop-shadow(10px -10px 10px #010b24);">
+<img src="section6/smoke.png" style="height:240px; width:80px;top:20%;left:70%;mix-blend-mode: screen;opacity:1;" class="smoke">
+<div class="river" style="height:13%; width:100%;bottom:0; background: url(section6/river2.png); background-size: cover; --left:1000px; animation: river 10s linear infinite;position: absolute;"></div>
+<img src="section6/rockright.png" style="filter: drop-shadow(10px -10px 10px #000); z-index: 40;" class="rock-right">
+ <img src="section6/bear.png" style="height:100px;width:100px;top:70%;left:90%; filter: drop-shadow(10px -10px 10px #000);z-index: 40;"> 
+<img src="section6/rockleft.png" style="filter: drop-shadow(10px -10px 10px #000);z-index: 40;" >
+<img src="section6/section6sparkles.png" style="mix-blend-mode: screen;">
+<img src="section6/leafs2.png" class="leafs" style="filter: drop-shadow(10px 10px 10px #000);">
+
+</section>
+<!-- section6 -->
+
+<!-- section7 -->
+ <section class="section7">
+  <div class="services" style="display: flex; position: absolute; justify-content: center; align-items: center; flex-direction: column; z-index: 20; width:30%;top:30px;left:0;padding-left: 20px;">
+    <h1 style="font-size: 2.5em; color:greenyellow;-webkit-text-stroke: 1px #ffffff7a;   font-family:Spicy Rice, serif; filter: drop-shadow(0px 0px 10px rgba(0, 255, 255, 0.438));" class="serviceh1">Services</h1>
+    <p style="font-size: 1em; color:rgb(0, 225, 255); font-family: Acme, sans-serif;filter: drop-shadow(0px 0px 10px rgba(0, 255, 255, 0.438));" class="servicep">The clearest way into the Universe is through a forest wilderness.” ...
+      Leave the road, take the trails.” ...
+      I wish the world was twice as big―and half of it was still unexplored.” ...
+      Nature is also great fun. ...
+      I believe a leaf of grass is no less than the journey-work of the stars.”</p>
+
+        
+     
+
+  </div>
+
+   
+  <div class="login-bt-wrap">
+    <input type="checkbox"  id="login">
+    <label for="login">
+      <div class="login-bt"><p style="font-family: Acme, sans-serif; filter: drop-shadow(1px 2px 3px #0000007c);">Login</p></div>
+    </label>
+
+     <div class="login-bt-child"><p style="font-family: Acme, sans-serif;">Parallex</p></div> 
+    
+    
+          </div>
+     
+
+
+
+ <img src="https://i.pinimg.com/564x/e1/f3/43/e1f3433990a8424e490999d57164b257.jpg"  style="z-index: 10;top:20%; height:250px;width:500px; position: absolute;left:25%;" class="forestskymorning"> -->
+ <img src="section7/forest-sky.png" style="z-index:10;" class="nightsky"> 
+  <img src="section7/forest-NoSky.png" style="z-index:11;"> 
+   <img src="section7/moon2.png" style="mix-blend-mode: screen;z-index: 10; height:100px; width:100px; left:40%; " class="moon2"> 
+ <div class="section7sun"></div>
+ <div class="cavebefore" style="background: #1d002c;  background-size: cover; background-position: center;position: absolute; background-size: cover;background-position: center; height: 145px; width:500px;  z-index: 15; top:0;left:24%;"></div>
+ <img src="section7/cave.png" style="filter: drop-shadow(3px 3px 10px inset #000); z-index: 13;" class="cave" > 
+<img src="section7/waterfall10.gif" style="left:14%; width:1800px;  top:-153px;">
+<img src="section7/waterfallbubble.png" style="height:50px; width:200px;top:66%;left:70%;" class="waterfallbubble">
+<div class="river" style="height:120%; width:100%; background: url(section7/river.png); background-size: cover; --left:1000px; animation: river 30s linear infinite;position: absolute;"></div>
+<img src="section7/manboat.png" style="height:40vh;width:60vh;top:300px; left:40%; z-index: 14;" id="manboat">
+<img src="section7/grass.png" style="z-index: 50;">
+
+
+</section>
+<!-- section7 -->
+
+
+  <!-- section5 -->
+   <section class="section5">
+    <h1 style="filter: drop-shadow(0px 10px 10px #000);">Save Nature</h1>
+<div class="container">
+  <div class="childcontainer">
+<div class="card card-1">
+  <div class="face1 front"><img src="layers/card1front.png" style="position: absolute; height:50%; width:100%;transform: translateZ(30px); margin-top:65px; margin-left: 10px;"></div>
+  <div class="face1 back">"><img src="layers/card1back.png" style="position: absolute; height:50%; width:100%;transform: translateZ(30px); filter:drop-shadow(2px 20px 10px #000000aa);margin-top: 50px;margin-right: 10px; "></div>
+</div>
+<div class="card card-2">
+  <div class="face2 front2">
+    <img src="layers/card2front.png" style="position: absolute; height:70%; width:100%;transform: translateZ(30px);" >
+  </div>
+<div class="face2 back2">
+  <img src="layers/card2back.png" style="position: absolute; height:70%; width:100%;transform: translateZ(30px);margin-top: 10px;">
+</div>
+</div>
+
+<div class="card card-3">
+  <div class="face3 front3">
+    <img src="layers/card3front.png" style="position: absolute; height:70%; width:100%;transform: translateZ(30px); filter:drop-shadow(-10px 20px 10px #8f00f56b); margin-top: 50px; margin-left: -10px;">
+  </div>
+  <div class="face3 back3">
+    <img src="layers/card3back.png" style="position: absolute; height:70%; width:100%;transform: translateZ(30px); filter:drop-shadow(-10px 20px 10px #8f00f56b); margin-top: 50px; margin-left: -10px; ">
+  </div>
+
+</div>
+
+</div>
+</div>
+<p>From childhood, we have heard that trees are our best friend but in practical life, we didn’t see anyone who treats trees as their friends. Although they are the most valuable life source on the earth. They benefit every life form in a direct or indirect way. And the earth is connected to them to maintain a natural balance. In this essay on save trees, we are discussing the reason why our friends need saving.
+
+  They nourish us and protect us in many ways. Also, they keep our environment green and clean. So, it becomes our responsibility to repay them for the things they do for us by saving them. Besides, large trees are more beneficial than small ones because they capture more carbon, capture more water, combat the heat, filter greenhouse gases, gives shelter from heat and sunlight, etc. So, it can be said that we depend on them more rather than they on us.</p>
+
+  
+   </section>
+   <footer>
+    
+     
+              
+  <img src="layers/footer layer2.png" style="position: absolute;height:100%;width:100%;filter: drop-shadow(40px 10px 10px #000); pointer-events: none;">
+  <img src="layers/footer.png"  style="position: absolute;height:50vh;width:50%;transform: translateY(-150px);filter: drop-shadow(10px 10px 10px #000);  pointer-events: none;">
+
+<div class="footer-content">
+  <div class="footer-child">
+<div class="search-wrap">
+  <input type="checkbox"  id="clicked">
+  <label for="clicked">
+      <div class="icon">
+      <i class='bx bx-search-alt-2' style="font-size: 30px; color:blue; filter: drop-shadow(4px 5px 3px #000);"></i>
+  </div>
+</label>
+ 
+  
+
+<div class="search">
+  <input type="search"  id="search" value="search_here..">
+
+  </div>
+</div>
+  <ul class="ul">
+    <li class="list"><p style="text-align: center; color:#fff; font-weight: bold;font-family: Georgia, 'Times New Roman', Times, serif; font-size: 1.2em;">Get The App</p>
+      <div class="mobile-logo" style="display: flex;margin-top: 10px;justify-content: space-between;">
+        <i class='bx bx-mobile-alt' style="font-size: 2.5em; filter: drop-shadow(2px 2px 2px #000);"></i>
+      <div class="some-content" style="display: flex;flex-direction: column;">
+
+        <p style="font-size: 10px;">Available on the iphone</p>
+        <p style="font-size: 1.3em;">App Store</p>
+      </div>
+    </div>
+    </li>
+    <li class="list">
+      <div class="playestore-logo" style="display: flex;margin-top: 10px;margin-left: 6px; justify-content: space-between;">
+        <svg  style="filter: drop-shadow(2px 2px 2px #000);"  height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 511.999 511.999" xml:space="preserve">
+<g>
+	<path style="fill:#32BBFF;" d="M382.369,175.623C322.891,142.356,227.427,88.937,79.355,6.028
+		C69.372-0.565,57.886-1.429,47.962,1.93l254.05,254.05L382.369,175.623z"/>
+	<path style="fill:#32BBFF;" d="M47.962,1.93c-1.86,0.63-3.67,1.39-5.401,2.308C31.602,10.166,23.549,21.573,23.549,36v439.96
+		c0,14.427,8.052,25.834,19.012,31.761c1.728,0.917,3.537,1.68,5.395,2.314L302.012,255.98L47.962,1.93z"/>
+	<path style="fill:#32BBFF;" d="M302.012,255.98L47.956,510.035c9.927,3.384,21.413,2.586,31.399-4.103
+		c143.598-80.41,237.986-133.196,298.152-166.746c1.675-0.941,3.316-1.861,4.938-2.772L302.012,255.98z"/>
+</g>
+<path style="fill:#2C9FD9;" d="M23.549,255.98v219.98c0,14.427,8.052,25.834,19.012,31.761c1.728,0.917,3.537,1.68,5.395,2.314
+	L302.012,255.98H23.549z"/>
+<path style="fill:#29CC5E;" d="M79.355,6.028C67.5-1.8,53.52-1.577,42.561,4.239l255.595,255.596l84.212-84.212
+	C322.891,142.356,227.427,88.937,79.355,6.028z"/>
+<path style="fill:#D93F21;" d="M298.158,252.126L42.561,507.721c10.96,5.815,24.939,6.151,36.794-1.789
+	c143.598-80.41,237.986-133.196,298.152-166.746c1.675-0.941,3.316-1.861,4.938-2.772L298.158,252.126z"/>
+<path style="fill:#FFD500;" d="M488.45,255.98c0-12.19-6.151-24.492-18.342-31.314c0,0-22.799-12.721-92.682-51.809l-83.123,83.123
+	l83.204,83.205c69.116-38.807,92.6-51.892,92.6-51.892C482.299,280.472,488.45,268.17,488.45,255.98z"/>
+<path style="fill:#FFAA00;" d="M470.108,287.294c12.191-6.822,18.342-19.124,18.342-31.314H294.303l83.204,83.205
+	C446.624,300.379,470.108,287.294,470.108,287.294z"/>
+</svg>
+      <div class="some-content" style="display: flex;flex-direction: column;">
+
+        <p style="font-size: 8px;">ANDROID APP ON</p>
+        <p style="font-size: 1.3em;">Google play</p>
+      </div>
+    </div>
+    </li>
+  </ul>
+
+  <ul class="ul">
+    <li class="list"><h2>Help</h2></li>
+    <li class="list"><p>FAQ Web</p></li>
+    <li class="list"><p>FAQ Mobile Apps</p></li>
+    <li class="list"><p>Forum</p></li>
+    <li class="list"><p>Suggestions</p></li>
+  </ul>
+  
+  
+  <ul class="ul">
+    <li class="list"><h2>Enterprise</h2></li>
+    <li class="list"><p>Advertise</p></li>
+    <li class="list"><p>Promote Your Business</p></li>
+    <li class="list"><p>Tourism Destinations</p></li>
+    <li class="list"><p>Trail Channel</p></li>
+  </ul>
+  
+  
+  <ul class="ul">
+    <li class="list"><h2>About Wikiloc</h2></li>
+    <li class="list"><p>Team</p></li>
+    <li class="list"><p>History</p></li>
+    <li class="list"><p>Prizes</p></li>
+    <li class="list"><p>Extra Thanks</p></li>
+    <li class="list"><p>Blogs</p></li>
+  </ul>
+
+  <ul class="ul">
+    <li class="list"><h2>Participate</h2></li>
+    <li class="list"><p>Donate</p></li>
+    <li class="list"><p>Donors</p></li>
+  </ul>
+</div>
+  <h3 style="width: 100%;">&copy2024,Parallex All Rights Reserved.</h3>
+  </div>
+ 
+   </footer>
+
+
+
+  <!-- section5 -->
+   
+</div>
+        <!-- body-container -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script>
+  gsap .from("#left-mount",
+  {
+  scrollTrigger:{scrub:true},
+y:100,
+ })
+
+ gsap .from("#right-mount",
+  {
+  scrollTrigger:{scrub:true},
+y:100,
+
+
+
+  })
+
+  
+ gsap .from("#hiker2",
+  {
+  scrollTrigger:{scrub:true},
+y:310,scale:1.2,
+})
+
+gsap .from(".sun",
+  {
+  scrollTrigger:{scrub:true},
+y:100,scale:1.2,
+})
+
+gsap .from(".moon",
+  {
+  scrollTrigger:{scrub:true},
+y:-70,scale:1.5,
+})
+
+
+gsap .from("#layer3",
+  {
+  scrollTrigger:{scrub:true},
+x:40,
+})
+
+
+gsap .from("#layer4",
+  {
+  scrollTrigger:{scrub:true},
+x:-50,
+})
+
+
+gsap .from("#mid-mount",
+  {
+  scrollTrigger:{scrub:true},
+x:-50,
+})
+
+
+
+gsap .from("#h1",
+  {
+  scrollTrigger:{scrub:true},
+x:50, scale:1.1,
+})
+
+
+
+gsap .from("#cloud1",
+  {
+  scrollTrigger:{scrub:true},
+x:100,
+})
+
+
+gsap .from("#cloud2",
+  {
+  scrollTrigger:{scrub:true},
+x:100,
+})
+
+
+gsap .from("#cloud3",
+  {
+  scrollTrigger:{scrub:true},
+x:-100,
+})
+
+
+
+
+gsap .from(".p",
+  {
+  scrollTrigger:{scrub:true},
+y:0,scale:1.1,opacity:0.4,
+})
+
+
+
+
+gsap .from(".h1",
+ 
+{
+  scrollTrigger:{scrub:true},
+y:70,scale:1.1,
+})
+
+
+
+
+gsap .from(".circle",
+ 
+{
+  scrollTrigger:{scrub:true},
+y:100,
+})
+
+gsap .from(".bt",
+ 
+{
+  scrollTrigger:{scrub:true},
+y:-40,
+})
+
+
+
+gsap .from(".img-wrap",
+ 
+{
+  scrollTrigger:{scrub:true},
+y:100,opacity:0,
+})
+
+gsap .from(".content",
+ 
+{
+  scrollTrigger:{scrub:true},
+y:-100,opacity:0,
+})
+
+
+gsap .from(".author",
+ 
+{
+  scrollTrigger:{scrub:true},
+opacity:0,
+})
+
+
+gsap .from("#birds",
+ 
+{
+  scrollTrigger:{scrub:true},
+x:350,
+})
+
+
+
+
+gsap .from(".section3",
+ 
+{
+  scrollTrigger:{scrub:true},
+scale:1,
+})
+
+
+
+gsap .from(".Layer1MAIN",
+ 
+{
+  scrollTrigger:{scrub:true},
+y:100,scale:2,
+})
+
+gsap .from(".trees",
+ 
+{
+  scrollTrigger:{scrub:true},
+y:100,scale:2,
+})
+
+gsap .from(".camp",
+ 
+{
+  scrollTrigger:{scrub:true},
+x:200,
+})
+
+
+ gsap .from("#manboat",
+ 
+{
+  scrollTrigger:{scrub:true},
+x:-600,
+})
+
+// gsap .from(".rock-right",
+ 
+//  {
+//    scrollTrigger:{scrub:true},
+//  y:500,
+//  })
+
+
+ 
+gsap .from(".aboutus",
+ 
+ {
+   scrollTrigger:{scrub:true},
+ y:1800,
+ })
+
+ 
+ gsap .from(".leafs",
+ 
+{
+  scrollTrigger:{scrub:true},
+y:-600,
+})
+ 
+ 
+gsap .from(".serviceh1",
+ 
+ {
+   scrollTrigger:{scrub:true},
+ y:-500,
+ })
+  
+gsap .from(".servicep",
+ 
+ {
+   scrollTrigger:{scrub:true},
+ y:-500,
+ })
+ 
+ gsap .from(".smoke",
+ 
+ {
+   scrollTrigger:{scrub:true},
+ y:400,opacity:0,
+ })
+
+
+ 
+ gsap .from(".moon2",
+ 
+ {
+   scrollTrigger:{scrub:true},
+ y:2000,
+ })
+
+ 
+ gsap .from(".section7sun",
+ 
+ {
+   scrollTrigger:{scrub:true},
+ y:900,
+ })
+
+ </script>
+</body>
+</html>
